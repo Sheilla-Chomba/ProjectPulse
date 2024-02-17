@@ -2,17 +2,23 @@
 <div class="main">
     <img src="../../../assets/Login.jpg" alt="" class="land-img">
     <div class="content">
-        <form class="login-form">
+        <form class="login-form" [formGroup]="loginForm" (ngSubmit)="login()">
             <div class="form-title">
                 <h1>Welcome Back!!</h1>
             </div>
             <div class="form-title">
                 <label for="">Email</label><br>
-                <input type="email" class="email-input">
+                <input type="email" class="email-input" formControlName="email">
+            </div>
+            <div *ngIf="loginForm.get('email')?.invalid && loginForm.get('email')?.touched" style="color: red;">
+                Email is required
             </div>
             <div class="form-title">
                 <label for="">Password</label><br>
-                <input type="password" class="password-input">
+                <input type="password" class="password-input" formControlName="password">
+            </div>
+            <div *ngIf="loginForm.get('password')?.invalid && loginForm.get('password')?.touched" style="color: red;">
+                Password is required
             </div>
             <div class="form-title">
                 <button class="login-btn">Login</button>

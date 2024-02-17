@@ -2,28 +2,28 @@
 <div class="main">
     <img src="../../../assets/Registration.jpg" alt="" class="land-img">
     <div class="content">
-        <form class="login-form">
+        <form class="login-form" #register="ngForm" (ngSubmit)="authenticate(register.value)">
             <div class="form-title">
                 <h1>Welcome User!!</h1>
             </div>
              <div class="form-title">
                 <label for="">First Name</label><br>
-                <input type="text" class="email-input">
+                <input type="text" ngModel class="email-input" name="fname">
             </div>
              <div class="form-title">
                 <label for="">Last Name</label><br>
-                <input type="text" class="email-input">
+                <input type="text" ngModel class="email-input" name="lname">
             </div>
             <div class="form-title">
                 <label for="">Email</label><br>
-                <input type="email" class="email-input">
+                <input type="email" ngModel class="email-input" name="email">
             </div>
             <div class="form-title">
                 <label for="">Password</label><br>
-                <input type="password" class="password-input">
+                <input type="password" ngModel class="password-input" name="password">
             </div>
             <div class="form-title">
-                <button class="login-btn">Login</button>
+                <button class="login-btn" type="submit">Login</button>
             </div>
             <div class="form-title">
                 <a class="no-account-href" (click)="navigateToLogin()">Already have an account?</a>

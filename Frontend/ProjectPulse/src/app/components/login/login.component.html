@@ -2,10 +2,12 @@
 <div class="main">
     <img src="../../../assets/Login.jpg" alt="" class="land-img">
     <div class="content">
-        <form class="login-form" [formGroup]="loginForm" (ngSubmit)="login()">
+        <form class="login-form" [formGroup]="loginForm" (ngSubmit)="login(loginForm.value)">
             <div class="form-title">
                 <h1>Welcome Back!!</h1>
             </div>
+            <div class="error-msg" *ngIf="visible">{{errorMsg}}</div>
+            <div class="success-msg" *ngIf="visible2">{{successMsg}}</div>
             <div class="form-title">
                 <label for="">Email</label><br>
                 <input type="email" class="email-input" formControlName="email">

@@ -6,6 +6,7 @@
             <div class="form-title">
                 <h1>Welcome User!!</h1>
             </div>
+            <div class="success-msg" *ngIf="showSuccessMessage">{{successMessage}}</div>
              <div class="form-title">
                 <label for="">First Name</label><br>
                 <input type="text" class="email-input" formControlName="fname">

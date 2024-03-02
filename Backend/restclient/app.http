@@ -2,10 +2,10 @@ POST http://localhost:4100/users
 Content-Type: application/json
 
 {
-    "f_name": "Jane",
-    "l_name": "Ngene",
-    "email": "janengene12@gmail.com",
-    "password": "12345678" 
+    "f_name": "Sheilla",
+    "l_name": "Chomba",
+    "email": "chombasheila980@gmail.com",
+    "password": "12345678"
 }
 
 ### GETTING ALL USERS
@@ -15,10 +15,10 @@ Content-Type: application/json
 
 ### GETTING USER BY ID
 
-GET http://localhost:4100/users/8dc0de98-3258-4223-87b0-d42d1b76cfdd
-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiOGRjMGRlOTgtMzI1OC00MjIzLTg3YjAtZDQyZDFiNzZjZmRkIiwiZl9uYW1lIjoiU2hlaWxsYSIsImxfbmFtZSI6IkNob21iYSIsImVtYWlsIjoiY2hvbWJhc2hlaWxhOTgwQGdtYWlsLmNvbSIsInJvbGUiOiJhZG1pbiIsImlzV2VsY29tZWQiOmZhbHNlLCJpYXQiOjE3MDgzNjcxMjksImV4cCI6MTcwODM3MDcyOX0.p9aTi923UZgkamQp9NJm8pssHW56TjY5doaNep9o7_I
+GET http://localhost:4100/users/769977ee-d84f-42f9-acff-b238b7388c3c
+token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiNzY5OTc3ZWUtZDg0Zi00MmY5LWFjZmYtYjIzOGI3Mzg4YzNjIiwiZl9uYW1lIjoiU2hlaWxsYSIsImxfbmFtZSI6IkNob21iYSIsImVtYWlsIjoiY2hvbWJhc2hlaWxhOTgwQGdtYWlsLmNvbSIsImlhdCI6MTcwOTM4MjczMCwiZXhwIjoxNzA5Mzg2MzMwfQ.1CH5omKUUSnQlOJ8IZQYF-OQRyEEvx00-4iHK1ubc84
 
-###
+### UPDATE USER DETAILS
 PUT http://localhost:4100/users/update/8dc0de98-3258-4223-87b0-d42d1b76cfdd
 Content-Type: application/json
 token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiOGRjMGRlOTgtMzI1OC00MjIzLTg3YjAtZDQyZDFiNzZjZmRkIiwiZl9uYW1lIjoiU2hlaWxsYSIsImxfbmFtZSI6IkNob21iYSIsImVtYWlsIjoiY2hvbWJhc2hlaWxhOTgwQGdtYWlsLmNvbSIsInJvbGUiOiJhZG1pbiIsImlzV2VsY29tZWQiOmZhbHNlLCJpYXQiOjE3MDgzNjcxMjksImV4cCI6MTcwODM3MDcyOX0.p9aTi923UZgkamQp9NJm8pssHW56TjY5doaNep9o7_I
@@ -31,7 +31,7 @@ token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiOGRjMGRlOTgtMzI1OC00
     "password": "12345678"
 }
 
-###
+### USER FROM DATABASE
 
 DELETE http://localhost:4100/users/delete/0b525987-47df-43ee-85a6-ab856849313b
 Content-Type: application/json

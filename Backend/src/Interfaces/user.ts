@@ -11,7 +11,6 @@ export interface loginUserDetails {
   f_name: string;
   l_name: string;
   email: string;
-  isWelcomed: boolean;
 }
 // export interface loginUserDetails{
 //     user_id: string,

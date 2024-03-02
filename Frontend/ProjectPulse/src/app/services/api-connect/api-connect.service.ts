@@ -1,13 +1,14 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable } from 'rxjs';
+import { ViewUsers } from '../../interfaces/view-users';
+import { Register } from '../../interfaces/register';
 
 
 @Injectable({
   providedIn: 'root',
 })
 export class ApiConnectService {
-  
   constructor(private http: HttpClient) {}
 
   signUpUser(
@@ -27,5 +28,28 @@ export class ApiConnectService {
       userData
     );
   }
-  
+
+  getUsers() {
+    interface info {
+      users: ViewUsers[];
+    }
+
+    return this.http.get<info>('http://localhost:4100/users');
+  }
+   getOneUser(id:string){
+    return this.http.get<{user:Register}>(`http://localhost:4100/users/${id}`
+    , {
+      headers: new HttpHeaders({
+        'Content-type': 'application/json',
+        // 'token': this.token
+      })
+    })
+  }
+  deleteUser(id: string) {
+    return this.http.delete(`http://localhost:4100/users/delete/${id}`, {
+      headers: new HttpHeaders({
+        'Content-type': 'application/json',
+      }),
+    });
+  }
 }

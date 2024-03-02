@@ -2,9 +2,9 @@ POST http://localhost:4100/users
 Content-Type: application/json
 
 {
-    "f_name": "Sheilla",
-    "l_name": "Chomba",
-    "email": "chombasheila980@gmail.com",
+    "f_name": "Admin",
+    "l_name": "Admin2",
+    "email": "admin@mail.com",
     "password": "12345678"
 }
 
@@ -15,8 +15,8 @@ Content-Type: application/json
 
 ### GETTING USER BY ID
 
-GET http://localhost:4100/users/769977ee-d84f-42f9-acff-b238b7388c3c
-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiNzY5OTc3ZWUtZDg0Zi00MmY5LWFjZmYtYjIzOGI3Mzg4YzNjIiwiZl9uYW1lIjoiU2hlaWxsYSIsImxfbmFtZSI6IkNob21iYSIsImVtYWlsIjoiY2hvbWJhc2hlaWxhOTgwQGdtYWlsLmNvbSIsImlhdCI6MTcwOTM4MjczMCwiZXhwIjoxNzA5Mzg2MzMwfQ.1CH5omKUUSnQlOJ8IZQYF-OQRyEEvx00-4iHK1ubc84
+GET http://localhost:4100/users/d2fb8133-e142-44b4-828e-19d9e345e950
+token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiNzY5OTc3ZWUtZDg0Zi00MmY5LWFjZmYtYjIzOGI3Mzg4YzNjIiwiZl9uYW1lIjoiU2hlaWxsYSIsImxfbmFtZSI6IkNob21iYSIsImVtYWlsIjoiY2hvbWJhc2hlaWxhOTgwQGdtYWlsLmNvbSIsImlhdCI6MTcwOTM4OTcwMSwiZXhwIjoxNzA5MzkzMzAxfQ.fTjQyjz8-w1sh3nC0RYRwPcnyAvPjRhBhJZYVXEht2M
 
 ### UPDATE USER DETAILS
 PUT http://localhost:4100/users/update/8dc0de98-3258-4223-87b0-d42d1b76cfdd

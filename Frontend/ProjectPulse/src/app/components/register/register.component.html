@@ -2,28 +2,40 @@
 <div class="main">
     <img src="../../../assets/Registration.jpg" alt="" class="land-img">
     <div class="content">
-        <form class="login-form" #register="ngForm" (ngSubmit)="authenticate(register.value)">
+        <form class="login-form" [formGroup]="registerForm" (ngSubmit)="register()">
             <div class="form-title">
                 <h1>Welcome User!!</h1>
             </div>
              <div class="form-title">
                 <label for="">First Name</label><br>
-                <input type="text" ngModel class="email-input" name="fname">
+                <input type="text" class="email-input" formControlName="fname">
+            </div>
+            <div *ngIf="registerForm.get('fname')?.invalid && registerForm.get('fname')?.touched" style="color: red;">
+                First Name is required
             </div>
              <div class="form-title">
                 <label for="">Last Name</label><br>
-                <input type="text" ngModel class="email-input" name="lname">
+                <input type="text"  class="email-input" formControlName="lname">
+            </div>
+            <div *ngIf="registerForm.get('lname')?.invalid && registerForm.get('lname')?.touched" style="color: red;">
+                Last Name is required
             </div>
             <div class="form-title">
                 <label for="">Email</label><br>
-                <input type="email" ngModel class="email-input" name="email">
+                <input type="email" class="email-input" formControlName="email">
+            </div>
+            <div *ngIf="registerForm.get('email')?.invalid && registerForm.get('email')?.touched" style="color: red;">
+                Email is required
             </div>
             <div class="form-title">
                 <label for="">Password</label><br>
-                <input type="password" ngModel class="password-input" name="password">
+                <input type="password" class="password-input" formControlName="password">
+            </div>
+            <div *ngIf="registerForm.get('password')?.invalid && registerForm.get('password')?.touched" style="color: red;">
+                Password is required
             </div>
             <div class="form-title">
-                <button class="login-btn" type="submit">Login</button>
+                <button class="login-btn" type="submit">Register</button>
             </div>
             <div class="form-title">
                 <a class="no-account-href" (click)="navigateToLogin()">Already have an account?</a>
